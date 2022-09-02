@@ -1,12 +1,175 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
   </head>
+
   <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
+    <!-- Шапка -->
+    <header class="page_header">
+      <a class="page_logo" href="index.html">
+        <img alt="Логотип Глейси." src="image/logo_gllacy.svg" width="137" height="55">
+      </a>
+      <nav class="navigation">
+        <ul class="navigation_list">
+          <li class="navigation_item">
+            <a class="navigation_item_link" href="#">
+              Каталог
+            </a>
+          </li>
+          <li class="navigation_item">
+            <a class="navigation_item_link" href="#">
+              Доставка и оплата
+            </a>
+          </li>
+          <li class="navigation_item">
+            <a class="navigation_item_link" href="#">
+              О компании
+            </a>
+          </li>
+      </nav>
+
+      <div>
+        <a class="header_link_phone" href="tel:+78005558628">
+          +7 800 555-86-28
+        </a>
+
+        <a class="header_link_search" href="#">
+          <span class="visually_hidden">
+            Поиск
+          </span>
+        </a>
+
+        <a class="header_link_login" href="#">
+          Вход
+        </a>
+
+        <a class="header_link_basket" href="#">
+          2 товара
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <h1 class="visually_hidden">
+        Глейси
+      </h1>
+      <section class="slider">
+        <h2 class="visually_hidden">
+          Слайдер с товарами
+        </h2>
+
+        <div class="slider_controls">
+          <button class="slider_button button_previous" type="button">
+            <span class="visually_hidden">Предыдущее фото</span>
+          </button>
+          <button class="slider_button button_next" type="button">
+            <span class="visually_hidden">Следующее фото</span>
+          </button>
+        </div>
+
+        <div class="slider_item is_active">
+          <div class="slider_desc_wrapper">
+            <h3 class="title">
+              Нежный пломбир
+              <br>
+              с клубничным джемом
+            </h3>
+            <p class="description_slide">
+              Натуральное мороженое из свежих сливок
+              <br>
+              и молока с вкуснейшим клубничным джемом
+              <br>
+              – это идеальный десерт для всей семьи.
+            </p>
+            <a class="button" href="#">
+              Заказать
+            </a>
+            <img class="slider_image" src="image/delicate_ice_cream.jpg" alt="Фото нежный пломбир." width="306" height="507">
+          </div>
+
+          <div class="slider_desc_wrapper">
+            <h3 class="title">
+              Сливочное мороженое
+              <br>
+              со вкусом банана
+            </h3>
+            <p class="description_slide">
+              Сливочное мороженое с ярким банановым
+              <br>
+              вкусом подарит вам свежесть и наслаждение
+              <br>
+              даже в самый жаркий летний день.
+            </p>
+            <a class="button" href="#">
+              Заказать
+            </a>
+            <img class="slider_image" src="image/creamy_ice_cream.jpg" alt="Фото сливочное мороженое." width="306" height="507">
+          </div>
+
+          <div class="slider_desc_wrapper">
+            <h3 class="title">
+              Карамельный пломбир
+              <br>
+              с маршмеллоу
+            </h3>
+            <p class="description_slide">
+              Необычный сладкий десерт с карамельным
+              <br>
+              топпингом и кусочками зефира завоюет
+              <br>
+              сердца сладкоежек всех возрастов.
+            </p>
+            <a class="button" href="#">
+              Заказать
+            </a>
+            <img class="slider_image" src="image/caramel_ice_cream.jpg" alt="Фото карамельный пломбир." width="306" height="507">
+          </div>
+
+          <div class="slider_pagination">
+            <button class="slides_radio is_active " type="button">
+              <span class="visually_hidden">1.</span>
+            </button>
+            <button class="slides_radio" type="button">
+              <span class="visually_hidden">2.</span>
+            </button>
+            <button class="slides_radio" type="button">
+              <span class="visually_hidden">3.</span>
+            </button>
+          </div>
+
+          <div class="slider_social">
+            <ul class="slider_social_list">
+              <li class="slider_social_item">
+                <a class="icon_social_link" href="https://t.me/htmlacademy">
+                  <span class="visually_hidden">
+                    Телеграм
+                  </span>
+                </a>
+              </li>
+              <li class="slider_social_item">
+                <a class="icon_social_link" href="https://vk.com/htmlacademy">
+                  <span class="visually_hidden">
+                    Вконтакте
+                  </span>
+                </a>
+              </li>
+              <li class="slider_social_item">
+                <a class="icon_social_link" href="https://www.youtube.com/user/htmlacademy.ru">
+                  <span class="visually_hidden">
+                    YouTube
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
 
   </body>
+
 </html>
