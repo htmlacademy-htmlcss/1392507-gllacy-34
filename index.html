@@ -3,7 +3,9 @@
 
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Глейси</title>
+    <title>
+      HTML Academy: Глейси
+    </title>
   </head>
 
   <body>
@@ -53,6 +55,7 @@
       </div>
     </header>
 
+    <!-- Main -->
     <main>
       <h1 class="visually_hidden">
         Глейси
@@ -173,7 +176,9 @@
       </section>
 
       <section>
-        <h2>Заказывайте мороженое и получайте подарки!</h2>
+        <h2>
+          Заказывайте мороженое и получайте подарки!
+        </h2>
         <article>
           <div class="article__content">
             <h3>
@@ -215,8 +220,8 @@
 
       <section>
         <h2>Попробуйте самые популярные вкусы нашего мороженого</h2>
-        <ul>
-          <li>
+        <ul class="product_list">
+          <li class="product_card">
             <img src="image/raspberry_ice_cream.jpg" alt="Мороженное малинка." width="168" height="168">
             <h3>
               Малинка
@@ -237,7 +242,7 @@
             </div>
           </li>
 
-          <li>
+          <li class="product_card">
             <img src="image/pistachio_ice_cream.jpg" alt="Мороженное фисташка." width="168" height="168">
             <h3>
               Фисташка
@@ -259,7 +264,7 @@
             </div>
           </li>
 
-          <li>
+          <li class="product_card">
             <img src="image/blueberry_ice_cream.jpg" alt="Мороженное черника." width="168" height="168">
             <h3>
               Черника
@@ -281,7 +286,7 @@
             </div>
           </li>
 
-          <li>
+          <li class="product_card">
             <img src="image/bubble_gum.jpg" alt="Мороженное бабл-гам." width="168" height="168">
             <h3>
               Бабл-гам
@@ -413,23 +418,24 @@
           </p>
 
           <form class="delivery_form" action="https://echo.htmlacademy.ru/" method="post">
-                <label class="form_label" for="delivery_date">
-                  Дата
-                </label>
-                <input class="field" type="text" name="delivery_date" id="delivery_date" placeholder="01.04.2020">
+            <label class="form_label" for="delivery_date">
+              Дата
+            </label>
+            <input class="field" type="text" name="delivery_date" id="delivery_date" placeholder="01.04.2020">
 
-                <label class="form_label" for="delivery_phone">
-                  Телефон
-                </label>
-                <input class="field" type="text" name="delivery_phone" id="delivery_phone" placeholder="+7 800 999-00-00">
+            <label class="form_label" for="delivery_phone">
+              Телефон
+            </label>
+            <input class="field" type="text" name="delivery_phone" id="delivery_phone" placeholder="+7 800 999-00-00">
 
-                <label class="form_label" for="delivery_date">
-                  Адрес
-                </label>
-                <input class="field" type="text" name="delivery_address" id="delivery_address" placeholder="ул. Большая Конюшенная, 19/8">
+            <label class="form_label" for="delivery_date">
+              Адрес
+            </label>
+            <input class="field" type="text" name="delivery_address" id="delivery_address"
+              placeholder="ул. Большая Конюшенная, 19/8">
 
             <button class="button delivery_submit" type="submit">Отправить</button>
-        </form>
+          </form>
         </div>
       </section>
 
@@ -437,38 +443,38 @@
         <h2 class="visually_hidden">
           Контакты
         </h2>
-            <div class="container_contacts">
-                <div class="contacts_description">
-                    <p class="contact_text">
-                      Адрес главного офиса
-                      <br>
-                      и офлайн-магазина:
-                    </p>
-                        <address class="address">
-                        <p class="contact_address_text">
-                          наб. реки Карповки,
-                          <br>
-                          5 лит П, Санкт-Петербург
-                        </p>
-                        </address>
+        <div class="container_contacts">
+          <div class="contacts_description">
+            <p class="contact_text">
+              Адрес главного офиса
+              <br>
+              и офлайн-магазина:
+            </p>
+            <address class="address">
+              <p class="contact_address_text">
+                наб. реки Карповки,
+                <br>
+                5 лит П, Санкт-Петербург
+              </p>
+            </address>
 
-                    <p class="contact_phone_text">
-                      Для заказов по телефону:
-                    </p>
-                        <address class="address">
-                        <a class="contact_phone" href="tel:+78128121212">
-                          +7 (812) 812-12-12
-                        </a>
-                        </address>
-                    <p class="hours">
-                      (с 10 до 20 ежедневно)
-                    </p>
-                    <button class="button" type="submit">
-                      Форма обратной связи
-                    </button>
-                </div>
-            </div>
-        </section>
+            <p class="contact_phone_text">
+              Для заказов по телефону:
+            </p>
+            <address class="address">
+              <a class="contact_phone" href="tel:+78128121212">
+                +7 (812) 812-12-12
+              </a>
+            </address>
+            <p class="hours">
+              (с 10 до 20 ежедневно)
+            </p>
+            <button class="button" type="submit">
+              Форма обратной связи
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="page_footer">
@@ -498,32 +504,32 @@
 
       <div class="footer_navigation">
         <ul class="footer_navigation_list">
-            <li class="heart">
-              <a class="footer_navigation_link" href="#">
-                <b>Для поставщиков</b>
-              </a>
-            </li>
+          <li class="heart">
+            <a class="footer_navigation_link" href="#">
+              <b>Для поставщиков</b>
+            </a>
+          </li>
 
-            <li>
-              <a class="footer_navigation_link" href="#">
+          <li>
+            <a class="footer_navigation_link" href="#">
               О производстве
             </a>
           </li>
         </ul>
 
         <ul class="footer_navigation_list">
-            <li>
-              <a class="footer_navigation_link" href="#">
+          <li>
+            <a class="footer_navigation_link" href="#">
               Наши документы
             </a>
           </li>
-            <li>
-              <a class="footer_navigation_link" href="#">
-                Экологические стандарты
-              </a>
-            </li>
+          <li>
+            <a class="footer_navigation_link" href="#">
+              Экологические стандарты
+            </a>
+          </li>
         </ul>
-        </div>
+      </div>
 
       <div>
         <a href="">
