@@ -6,12 +6,13 @@
     <title>
       HTML Academy: Глейси
     </title>
+    <link rel="stylesheet" href="./styles/style.css">
   </head>
 
   <body>
 
     <!-- Шапка -->
-    <header class="page_header">
+    <header class="page_header header_catalog">
       <a class="page_logo" href="index.html">
         <img alt="Логотип Глейси." src="image/logo_gllacy.svg" width="137" height="55">
       </a>
@@ -21,7 +22,25 @@
             <a class="navigation_item_link" href="#">
               Каталог
             </a>
+            <div class="header_popup">
+              <span class="popup_title">Новинки</span>
+              <ul class="popup_list">
+                <li class="popup_item">
+                  <a href="./catalog.html" class="popup_link">Сливочное</a>
+                </li>
+                <li class="popup_item">
+                  <a href="#" class="popup_link">Щербеты</a>
+                </li>
+                <li class="popup_item">
+                  <a href="#" class="popup_link">Фруктовый&nbsp;лед</a>
+                </li>
+                <li class="popup_item">
+                  <a href="#" class="popup_link">Мелорин</a>
+                </li>
+              </ul>
+            </div>
           </li>
+
           <li class="navigation_item">
             <a class="navigation_item_link" href="#">
               Доставка и оплата
@@ -32,26 +51,139 @@
               О компании
             </a>
           </li>
+        </ul>
       </nav>
 
-      <div>
+      <div class="header_user_container">
         <a class="header_link_phone" href="tel:+78005558628">
           +7 800 555-86-28
         </a>
 
-        <button class="header_link_search" type="button">
+        <div class="searching_container">
+        <button class="navigation_button header_button_search" type="button">
           <span class="visually_hidden">
             Поиск
           </span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M2.663 7.33a4.667 4.667 0 1 1 8.028 3.238.683.683 0 0 0-.123.123A4.667 4.667 0 0 1 2.664 7.33Zm8.412 4.688a6 6 0 1 1 .943-.943l2.45 2.45a.667.667 0 1 1-.943.943l-2.45-2.45Z"
+              fill="currentColor" />
+            </svg>
         </button>
+        <div class="searching_popup">
+          <form class="searching_form" action="https://echo.htmlacademy.ru/" method="post">
+            <input class="input searching_input" type="search" placeholder="Поиск по сайту">
+          </form>
+        </div>
+      </div>
 
-        <button class="header_link_login" type="button">
+      <div class="account_container">
+        <button class="navigation_button header_button_login" type="button">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M9 1.667C9 1.298 9.298 1 9.667 1h2.666a2 2 0 0 1 2 2v9.333a2 2 0 0 1-2 2H9.667a.667.667 0 1 1 0-1.333h2.666a.666.666 0 0 0 .667-.667V3a.666.666 0 0 0-.667-.667H9.667A.667.667 0 0 1 9 1.667ZM5.862 3.862c.26-.26.682-.26.943 0l3.329 3.329a.69.69 0 0 1 .129.177.664.664 0 0 1-.13.775L6.806 11.47a.667.667 0 1 1-.943-.942l2.195-2.196h-6.39a.667.667 0 1 1 0-1.333h6.39L5.862 4.805a.667.667 0 0 1 0-.943Z"
+              fill="currentColor" /></svg>
           Вход
-          </a>
+        </button>
+      </div>
 
-          <button class="header_link_basket" type="button">
+      <div class="account_popup">
+        <div class="account_container">
+        <h2 class="account_title">Личный кабинет</h2>
+        <form class="searching_form" action="https://echo.htmlacademy.ru/" method="post">
+          <ul class="inputs_list">
+            <li>
+              <input class="input email" type="email" name="email" placeholder="email@example.com" required>
+            </li>
+            <li>
+              <input class="input password" name="password" type="password" required>
+            </li>
+          </ul>
+          <button class="additional_button sign_in_button" type="submit">Войти</button>
+          <ul class="help_links_list">
+            <li>
+              <a class="help_link forgot_password" href="#">Забыли пароль?</a>
+            </li>
+            <li>
+              <a class="help_link registration" href="#">Регистрация</a>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+
+    <div class="cart_container">
+          <button class="navigation_button cart_button" type="button">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M1.167 1.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.825 1.825 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611l-.473-2.361a.667.667 0 0 0-.654-.536H1.167ZM5.69 9.544 4.878 5.48h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z"
+                fill="#2D3440" /></svg>
             2 товара
           </button>
+
+           <!-- Если в корзине нет товаров, то к div cart_popup добавить класс is_empty -->
+           <div class="cart_popup">
+            <h2 class="cart_title">
+              Корзина
+            </h2>
+            <ul class="cart_list">
+              <li class="cart_item">
+                <a class="cart_link" href="#">
+                  <img class="cart_image" src="./image/raspberry_ice_cream.jpg" width="46" height="46"
+                    alt="Шарик малинового мороженого.">
+                  <div class="cart_product_description">
+                    <span class="cart_product_name">
+                      Малинка
+                    </span>
+                    <span class="cart_product_quantity">
+                      1 кг &#215; 310 &#8381;
+                    </span>
+                  </div>
+                </a>
+
+                <span class="cart_product_price">
+                  310 &#8381;
+                </span>
+                <button class="delete_button" type="button">
+                  <span class="visually_hidden">
+                    Удалить товар из корзины.
+                  </span>
+                </button>
+              </li>
+              <li class="cart_item">
+                <a class="cart_link" href="#">
+                  <img class="cart_image" src="./image/bubble_gum.jpg" width="46" height="46"
+                    alt="Шарик мороженого Бабл-гам.">
+                  <div class="cart_product_description">
+                    <span class="cart_product_name">
+                      Бабл-гам
+                    </span>
+                    <span class="cart_product_quantity">
+                      1,5 кг &#215; 320 &#8381;
+                    </span>
+                  </div>
+                </a>
+
+                <span class="cart_product_price">
+                  480 &#8381;
+                </span>
+                <button class="delete_button">
+                  <span class="visually_hidden">
+                    Удалить товар из корзины.
+                  </span>
+                </button>
+              </li>
+            </ul>
+            <div class="cart_summary">
+              <a class="checkout_button additional_button" href="#">
+                Оформить заказ
+              </a>
+              <span class="total_price">
+                Итого: 790 &#8381;
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -621,3 +753,6 @@
         </p>
       </div>
     </footer>
+  </body>
+
+  </html>
