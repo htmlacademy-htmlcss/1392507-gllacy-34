@@ -634,11 +634,17 @@ body {
   width: 150px;
 }
 
+.slider_content {
+  display: none;
+  align-self: center;
+  padding: 40px 0;
+}
+
 .slider_slide--active .slider_content {
   display: block;
 }
 
-.slider_slide--active .slider_image {
+.slider_slide--active .slider_images {
   transform: scale(1);
 }
 
@@ -649,11 +655,7 @@ body {
   grid-template-columns: 470px 630px;
 }
 
-.slider_content {
-  display: none;
-  align-self: center;
-  padding: 40px 0;
-}
+
 
 .slider_title {
   margin: 0 0 24px;
@@ -1134,7 +1136,7 @@ body {
   border-radius: 16px;
 }
 
-.newsletter__content {
+.newsletter_content {
   background-color: #ffffff;
   padding: 26px 26px 28px;
   border-radius: 16px;
@@ -1396,4 +1398,378 @@ body {
   font-size: 14px;
   line-height: 20px;
   margin-bottom: 32px;
+}
+
+/* Каталог */
+/* Хлебные крошки */
+
+.breadcrumbs_list {
+  padding: 0;
+  margin: 0 0 16px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs_item:not(:last-child) {
+  position: relative;
+  padding-right: 20px;
+  margin-right: 8px;
+}
+
+.breadcrumbs_item:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 12px;
+  height: 12px;
+  background-image: url("../image/chevrons_right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.breadcrumbs_item.is_current {
+  border-bottom: 1px solid #2d3440;
+}
+
+.breadcrumbs_item_link {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #2d3440;
+  text-decoration: none;
+}
+
+.catalog_title {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 46px;
+  color: #2d3440;
+  margin: 0 0 40px;
+}
+
+/* Фильтры */
+
+.catalog_form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 95px;
+  max-width: 823px;
+}
+
+.filter_input_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(252, 252, 252, 0.3);
+  border-radius: 20px;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  margin: 0 24px 16px 0;
+  padding: 0;
+  border: none;
+}
+
+.filter_fat_percentage {
+  margin-right: 0;
+  max-width: 383px;
+}
+
+.filter_input_wrapper_fat {
+  padding: 7px 23px 7px 23px;
+}
+
+.filter_title {
+  padding: 0;
+  margin-left: 16px;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 20px;
+  color: #2d3440;
+  margin-bottom: 8px;
+}
+
+.select_sorting {
+  position: relative;
+  width: 196px;
+  padding: 8px 33px 8px 16px;
+  background-color: rgba(252, 252, 252, 0.3);
+  border: none;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 20px;
+  color: #2d3440;
+  appearance: none;
+  background-image: url("../image/arrow_down.svg");
+  background-repeat: no-repeat;
+  background-position: right 13px top 50%;
+}
+
+.filter_price {
+  min-height: 36px;
+  padding: 8px 16px;
+
+}
+
+.range_scale {
+  width: 164px;
+  height: 2px;
+  background-color: rgb(86, 92, 102, 0.3);
+  border-radius: 2px;
+}
+
+.range_bar {
+  position: relative;
+  left: 32px;
+  width: 72px;
+  height: 2px;
+  background-color: #565c66;
+  z-index: 1;
+}
+
+.range_button {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: none;
+  background-color: #fcfcfc;
+  box-shadow: inset 0 0 0 6px #2d3440;
+  top: -7.5px;
+  cursor: pointer;
+}
+
+.range_button_min {
+  left: -8px;
+}
+
+.range_button_max {
+  right: -8px;
+}
+
+.controls {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.control_item:not(:last-child) {
+  margin-right: 16px;
+}
+
+.control_label {
+  position: relative;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+  padding-left: 21px;
+}
+
+.control_input {
+  margin: 0;
+  appearance: none;
+  cursor: pointer;
+}
+
+.control_mark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background-color: inherit;
+}
+
+.mark_radio {
+  background-image: url("../image/radio.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.mark_checkbox {
+  background-image: url("../image/checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.filter_ingredients {
+  margin-right: 16px;
+  margin-bottom: 0;
+}
+
+.catalog_filter_button {
+  align-self: flex-end;
+  font-size: 14px;
+  padding: 8px;
+  width: 185px;
+  color: #2d3440;
+  background-color: rgba(252, 252, 252, 0.3);
+  box-shadow: 0 0 0 2px #fcfcfc;
+}
+
+.catalog_filter_button:hover {
+  background-color: #fcfcfc;
+  box-shadow: 0 0 0 2px rgba(252, 252, 252, 0.3);
+}
+
+.catalog_filter_button:focus {
+  background-color: rgba(252, 252, 252, 0.3);
+  box-shadow: 0 0 0 2px #2d3440;
+  outline: none;
+}
+
+.catalog_filter_button:active {
+  background-color: rgba(252, 252, 252, 0.5);
+  box-shadow: 0 0 0 2px #feafc3;
+}
+
+.catalog_filter_button:disabled {
+  opacity: 0.4;
+}
+
+
+/* Продукты каталога */
+.product_card{
+  border-bottom: 1px solid rgba(252, 252, 252, 0.3);
+}
+
+.products_list_catalog {
+  margin-bottom: 57px;
+}
+
+.more_products_container {
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: start;
+  margin-bottom: 81px;
+  max-width: 682px;
+}
+
+.more_products_button {
+  width: 179px;
+}
+
+.pagination_container {
+  position: relative;
+  margin-left: auto;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+}
+
+.pagination_list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 24px);
+  justify-items: center;
+  max-width: 200px;
+}
+
+.pagination_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2d3440;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+}
+
+.pagination_current {
+  background-color: #fcfcfc;
+}
+
+.pagination_button {
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.backward_button {
+  background-image: url("../image/arrow_left.svg");
+  opacity: 0.3;
+  position: absolute;
+  left: 0;
+}
+
+.forward_button {
+  background-image: url("../image/arrow_right.svg");
+  position: absolute;
+  right: 0;
+}
+
+
+/* состояния */
+/* Состояния чекбоксов и радио кнопок */
+.control_input:disabled+.control_mark {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.control_input:hover+.mark_radio,
+.control_input:focus+.mark_radio {
+  background-image: url("../image/radio_hover.svg");
+}
+
+.control_input:checked:hover+.mark_radio,
+.control_input:checked:focus+.mark_radio {
+  background-image: url("../image/radio_checked_hover.svg");
+}
+
+.control_input:checked+.mark_radio {
+  background-image: url("../image/radio_checked.svg");
+}
+
+.control_input:disabled:hover+.mark_radio {
+  background-image: url("../image/radio.svg");
+}
+
+.control_input:checked:disabled:hover+.mark_radio {
+  background-image: url("../image/radio_checked.svg");
+}
+
+.control_input:hover+.mark_checkbox,
+.control_input:focus+.mark_checkbox {
+  background-image: url("../image/checkbox_hover.svg");
+}
+
+.control_input:checked:hover+.mark_checkbox,
+.control_input:checked:focus+.mark_checkbox {
+  background-image: url("../image/checkbox_checked_hover.svg");
+}
+
+.control_input:checked+.mark_checkbox {
+  background-image: url("../image/checkbox_checked.svg");
+}
+
+.control_input:disabled:hover+.mark_checkbox {
+  background-image: url("../image/checkbox.svg");
+}
+
+.control_input:checked:disabled:hover+.mark_checkbox {
+  background-image: url("../image/checkbox_checked.svg");
 }
