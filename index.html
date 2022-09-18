@@ -18,7 +18,7 @@
       </a>
       <nav class="navigation">
         <ul class="navigation_list">
-          <li class="navigation_item">
+          <li class="navigation_item header_navigation_item">
             <a class="navigation_item_link" href="catalog.html">
               Каталог
             </a>
@@ -82,14 +82,15 @@
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
               d="M9 1.667C9 1.298 9.298 1 9.667 1h2.666a2 2 0 0 1 2 2v9.333a2 2 0 0 1-2 2H9.667a.667.667 0 1 1 0-1.333h2.666a.666.666 0 0 0 .667-.667V3a.666.666 0 0 0-.667-.667H9.667A.667.667 0 0 1 9 1.667ZM5.862 3.862c.26-.26.682-.26.943 0l3.329 3.329a.69.69 0 0 1 .129.177.664.664 0 0 1-.13.775L6.806 11.47a.667.667 0 1 1-.943-.942l2.195-2.196h-6.39a.667.667 0 1 1 0-1.333h6.39L5.862 4.805a.667.667 0 0 1 0-.943Z"
-              fill="currentColor" /></svg>
+              fill="currentColor" />
+            </svg>
           Вход
         </button>
-      </div>
 
       <div class="account_popup">
-        <div class="account_container">
-        <h2 class="account_title">Личный кабинет</h2>
+        <h2 class="account_title">
+          Личный кабинет
+        </h2>
         <form class="searching_form" action="https://echo.htmlacademy.ru/" method="post">
           <ul class="inputs_list">
             <li>
@@ -109,8 +110,8 @@
             </li>
           </ul>
         </form>
-      </div>
     </div>
+  </div>
 
     <div class="cart_container">
           <button class="navigation_button cart_button" type="button">
@@ -196,9 +197,9 @@
         <h2 class="visually_hidden">
           Слайдер с товарами
         </h2>
-
+<!-- Слайдер -->
         <div class="slider_slides">
-          <div class="slider_slide slider_slide--active" data-class="color_pink">
+          <div class="slider_slide first_slide is_active" data-color="#feafc3">
             <div class="slider_content">
             <h3 class="slider_title">
               Нежный пломбир
@@ -218,14 +219,12 @@
           </div>
 
           <div class="slider_images">
-            <div class="slider_image">
-            <img src="image/strawberry_ice_cream.png" alt="Фото нежный пломбир." width="306"
+            <img class="slider_image" src="image/strawberry_ice_cream.png" alt="Фото нежный пломбир." width="306"
               height="507">
           </div>
           </div>
-          </div>
 
-          <div class="slider_slide slider_slide--active" data-class="color_blue">
+          <div class="slider_slide second_slide" data-color="#69a9ff">
             <div class="slider_content">
             <h3 class="slider_title">
               Сливочное мороженое
@@ -245,14 +244,12 @@
           </div>
 
           <div class="slider_images">
-            <div class="slider_image">
-            <img src="image/banana_ice_cream.png" alt="Фото сливочное мороженое." width="306"
+            <img class="slider_image" src="image/banana_ice_cream.png" alt="Фото сливочное мороженое." width="306"
               height="507">
           </div>
           </div>
-          </div>
 
-          <div class="slider_slide slider_slide--active" data-class="color_yellow">
+          <div class="slider_slide third_slide" data-color="#fcc850">
             <div class="slider_content">
             <h3 class="slider_title">
               Карамельный пломбир
@@ -272,10 +269,8 @@
           </div>
 
           <div class="slider_images">
-            <div class="slider_image">
-            <img src="image/caramel_ice_cream.png" alt="Фото карамельный пломбир." width="306"
+            <img class="slider_image" src="image/caramel_ice_cream.png" alt="Фото карамельный пломбир." width="306"
               height="507">
-          </div>
         </div>
           </div>
         </div>
