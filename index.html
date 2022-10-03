@@ -635,8 +635,7 @@
           </h3>
 
           <form class="delivery_form" action="https://echo.htmlacademy.ru/" method="post">
-            <div class="inputs_container">
-              <div class="input_wrapper">
+              <div class="input_wrapper input_date_wrapper">
                 <div class="label_container">
                   <label class="delivery_label" for="date">
                     Дата
@@ -678,7 +677,7 @@
                 <input class="input delivery_address_input" type="text" placeholder="ул. Большая Конюшенная, 19/8"
                   id="address">
               </div>
-            </div>
+
 
             <button class="additional_button  delivery_submit" type="submit">Отправить</button>
           </form>
@@ -809,6 +808,32 @@
         </p>
       </div>
     </footer>
+
+<!-- Модальное окно -->
+
+    <div class="modal_container">
+      <div class="modal_wrapper">
+        <button class="modal_close_button" type="button" aria-label="Закрыть форму обратной связи.">
+        </button>
+        <h2 class="modal_heading">
+          Мы обязательно ответим вам!
+        </h2>
+        <form class="modal_form" action="https://echo.htmlacademy.ru/" method="post">
+          <input class="input modal_input user_name_input" type="text" name="user-name" required="" value=""
+            placeholder="Имя и фамилия" aria-label="Введите ваши Имя и Фамилию.">
+          <!-- При неправильном заполнении поля ввода e-mail к <input> c классом email_input добавить класс is-invalid для показа сообщения -->
+          <input class="input modal_input email_input" type="email" name="user-email" required="" value=""
+            placeholder="email@example.com" id="user-email" aria-label="Введите адрес электронной почты.">
+          <textarea class="input modal_input comment_input" name="comment" aria-label="Напишите комментарий."
+            rows="6">
+            В свободной форме
+          </textarea>
+          <button class="modal_button additional_button" type="submit">
+            Отправить
+          </button>
+        </form>
+      </div>
+    </div>
 
     <script src="js/index.js"></script>
 

@@ -51,3 +51,30 @@ const initSlider = () => {
 };
 
 initSlider();
+
+const feedbackButton = document.querySelector(".feedback_button");
+const modalCloseButton = document.querySelector(".modal_close_button");
+const modal = document.querySelector(".modal_container");
+
+feedbackButton.addEventListener("click", (evt) => {
+  evt.preventDefault();
+  modal.classList.add("is_open");
+});
+
+modalCloseButton.addEventListener("click", (evt) => {
+  evt.preventDefault();
+  modal.classList.remove("is_open");
+});
+
+document.addEventListener("keydown", (evt) => {
+  if (evt.key === "Escape") {
+    evt.preventDefault();
+    modal.classList.remove("is_open");
+  }
+});
+
+document.addEventListener("click", (evt) => {
+  if (evt.target === modal) {
+    modal.classList.remove("is_open");
+  }
+});

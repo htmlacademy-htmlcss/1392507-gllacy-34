@@ -166,6 +166,35 @@ body {
   padding: 13px 16px;
 }
 
+.input:hover {
+  outline: 1px solid #2d3440;
+}
+
+.input:focus {
+  outline: 2px solid #2d3440;
+}
+
+.input.is_invalid {
+  outline: 1px solid #ea5454;
+}
+
+.input:hover.is_invalid {
+  outline: 2px solid #ea5454;
+}
+
+.input:disabled {
+  background-color: #e7e7e7;
+  color: rgba(45, 52, 64, 0.65);
+}
+
+.input:disabled:hover {
+  outline: 1px solid #b9b9b9;
+}
+
+.input:disabled:hover::placeholder {
+  color: #2d3440;
+}
+
 .input::placeholder {
   font-family: inherit;
   font-weight: 400;
@@ -778,11 +807,12 @@ body {
 .cart_image {
   display: block;
   margin-right: 16px;
+  transform: scale(1);
+  transition: transform 0.6s;
 }
 
-.cart_product_description {
-  display: flex;
-  flex-direction: column;
+.cart_link:hover .cart_image {
+  transform: scale(1.1);
 }
 
 .cart_product_name {
@@ -807,6 +837,12 @@ body {
   margin-left: auto;
 }
 
+.cart_product_description {
+  display: flex;
+  flex-direction: column;
+}
+
+
 .delete_button {
   position: absolute;
   width: 16px;
@@ -815,11 +851,19 @@ body {
   top: 50%;
   transform: translateY(-50%);
   background-color: transparent;
-  background-image: url("../image");
+  background-image: url("../image/cross.svg");
   background-repeat: no-repeat;
   background-position: center;
   border: none;
   cursor: pointer;
+}
+
+.delete_button:hover {
+  opacity: 0.6;
+}
+
+.delete_button:active {
+  opacity: 0.3;
 }
 
 .cart_summary {
@@ -922,7 +966,7 @@ body {
   transform: scale(0.91) translate(10px, 20px);
 }
 
-.slider_image::before {
+.slider_images::before {
   position: absolute;
   content: "";
   width: 312px;
@@ -959,6 +1003,7 @@ body {
   color: #2d3440;
   background-color: rgba(252, 252, 252, 0.3);
   outline: none;
+  cursor: pointer;
 }
 
 .slider_button:hover {
@@ -1406,7 +1451,7 @@ body {
 
 .delivery_content {
   z-index: 1;
-  padding-top: 104px;
+  padding-top: 103px;
 }
 
 .delivery_title {
@@ -1438,7 +1483,6 @@ body {
 .delivery_form {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
   align-items: center;
 }
 
@@ -1449,25 +1493,22 @@ body {
   margin: 0 0 32px;
 }
 
-.inputs_container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 16px;
-  row-gap: 20px;
-  margin-bottom: 32px;
-}
-
 .input_wrapper {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.input_date_wrapper {
+  margin-right: 16px;
 }
 
 .label_container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 9px;
 }
 
 .delivery_label {
@@ -1475,7 +1516,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   color: #2d3440;
-  margin-right: 4px;
+  margin-right: 5px;
 }
 
 .tooltip_button {
@@ -1540,7 +1581,7 @@ body {
 }
 
 .input_wrapper_address {
-  grid-column: 1/-1;
+  margin-bottom: 34px;
 }
 
 .delivery_address_input {
@@ -2199,4 +2240,88 @@ body {
   background-image: url("../image/arrow_right.svg");
   position: absolute;
   right: 0;
+}
+
+/* Модальное окно */
+
+.modal_container {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(45, 52, 64, 0.3);
+}
+
+.modal_container.is_open {
+  display: block;
+}
+
+.modal_wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 570px;
+  background-color: #fcfcfc;
+  box-shadow: 0 15px 40px rgba(45, 52, 64, 0.12);
+  padding: 64px;
+  border-radius: 8px;
+}
+
+.modal_close_button {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+  background-image: url(../image/cross.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.modal_close_button:hover {
+  opacity: 0.6;
+}
+
+.modal_close_button:active {
+  opacity: 0.3;
+}
+
+.modal_heading {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0 0 32px;
+  max-width: 440px;
+  color: #2d3440;
+}
+
+.modal_input {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.comment_input {
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #b9b9b9;
+  resize: none;
+}
+
+.comment_input:focus {
+  color: #2d3440;
+}
+
+.modal_button {
+  margin-left: auto;
 }
