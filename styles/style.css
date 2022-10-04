@@ -209,7 +209,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 21px;
+  margin-bottom: 16px;
 }
 
 .header_catalog {
@@ -842,7 +842,6 @@ body {
   flex-direction: column;
 }
 
-
 .delete_button {
   position: absolute;
   width: 16px;
@@ -884,18 +883,20 @@ body {
 }
 
 /* Главная*/
-
 /* Slider */
 
 .slider {
   position: relative;
   margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
 }
 
 .slider_slides {
   display: flex;
-  flex-wrap: wrap;
   padding-left: 70px;
+  max-width: 1170px;
+  overflow: hidden;
 }
 
 .slider_slide.is_active {
@@ -934,7 +935,6 @@ body {
 .slider_slide {
   width: 140px;
 }
-
 
 .slider_title {
   margin: 0 0 24px;
@@ -996,6 +996,7 @@ body {
   border: 2px solid #fcfcfc;
   color: #fcfcfc;
   background-color: rgba(252, 252, 252, 0.3);
+  cursor: pointer;
 }
 
 .slider_button:focus {
@@ -1003,7 +1004,6 @@ body {
   color: #2d3440;
   background-color: rgba(252, 252, 252, 0.3);
   outline: none;
-  cursor: pointer;
 }
 
 .slider_button:hover {
@@ -1028,12 +1028,10 @@ body {
 }
 
 .slider_pagination {
-  position: absolute;
-  left: 0;
-  bottom: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, 11px);
   gap: 8px;
+  max-width: 200px;
 }
 
 .slides_radio {
@@ -1083,8 +1081,7 @@ body {
   margin-bottom: 81px;
   display: grid;
   grid-template-columns: repeat(2, 570px);
-  column-gap: 30px;
-  row-gap: 55px;
+  gap: 30px;
   justify-items: center;
 }
 
@@ -1096,7 +1093,7 @@ body {
   max-width: 434px;
   color: #2d3440;
   text-align: center;
-  margin: 0;
+  margin: 0 0 25px;
 }
 
 .present_article {
@@ -1104,6 +1101,13 @@ body {
   background-color: #ff7799;
   border-radius: 16px;
   padding: 36px 206px 36px 36px;
+}
+
+.article_content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
 }
 
 .article_title {
@@ -1123,7 +1127,9 @@ body {
 }
 
 .article_link {
-  max-width: 176px;
+  min-width: 176px;
+  max-width: 200px;
+  margin-top: auto;
 }
 
 .article_image {
@@ -1588,6 +1594,12 @@ body {
   width: 420px;
 }
 
+.delivery_submit {
+  min-width: 152px;
+  max-width: 176px;
+  margin-left: 135px;
+}
+
 
 /* Секция contacts */
 
@@ -1826,6 +1838,9 @@ body {
 
 
 /* Каталог */
+.products {
+  border-bottom: 1px solid rgba(252, 252, 252, 0.3);
+}
 /* Хлебные крошки */
 
 .breadcrumbs_list {
@@ -1855,8 +1870,9 @@ body {
   background-position: center;
 }
 
-.breadcrumbs_item.is_current {
+.breadcrumbs_item:last-child .breadcrumbs_item_link {
   border-bottom: 1px solid #2d3440;
+  pointer-events: none;
 }
 
 .breadcrumbs_item_link {
@@ -1878,7 +1894,8 @@ body {
   font-size: 32px;
   line-height: 46px;
   color: #2d3440;
-  margin: 0 0 40px;
+  margin: 0 0 39px;
+  max-width: 600px;
 }
 
 /* Фильтры */
@@ -1886,16 +1903,17 @@ body {
 .catalog_form {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  margin-bottom: 95px;
-  max-width: 823px;
+  align-items: flex-start;
+  margin-bottom: 79px;
 }
 
 .filter_input_wrapper {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   background-color: rgba(252, 252, 252, 0.3);
   border-radius: 20px;
+  padding: 9px 24px;
 }
 
 .filter {
@@ -1906,13 +1924,12 @@ body {
   border: none;
 }
 
-.filter_fat_percentage {
-  margin-right: 0;
-  max-width: 383px;
+.filter_input_wrapper_fat {
+  padding: 10px 23px 9px 23px;
 }
 
-.filter_input_wrapper_fat {
-  padding: 7px 23px 7px 23px;
+.filter_input_wrapper_ingredients {
+  padding: 11px 23px 9px 23px;
 }
 
 .filter_title {
@@ -2018,6 +2035,11 @@ body {
   flex-wrap: wrap;
 }
 
+.control_item {
+  display: flex;
+  max-width: 200px;
+}
+
 .control_item:not(:last-child) {
   margin-right: 16px;
 }
@@ -2109,18 +2131,19 @@ body {
 }
 
 .filter_ingredients {
-  margin-right: 16px;
-  margin-bottom: 0;
+  margin-right: 19px;
 }
 
 .catalog_filter_button {
   align-self: flex-end;
+  transform: translateY(-2px);
   font-size: 14px;
-  padding: 8px;
+  padding: 8px 24px;
   width: 185px;
   color: #2d3440;
   background-color: rgba(252, 252, 252, 0.3);
   box-shadow: 0 0 0 2px #fcfcfc;
+  margin-bottom: 16px;
 }
 
 .catalog_filter_button:hover {
