@@ -88,7 +88,11 @@
           </button>
           <div class="searching_popup">
             <form class="searching_form" action="https://echo.htmlacademy.ru/" method="post">
-              <input class="input searching_input" type="search" placeholder="Поиск по сайту">
+              <label class="visually_hidden" for="header_search">
+                Поиск по сайту.
+              </label>
+              <input class="input searching_input" type="search" name="header_search" id="header_search"
+                placeholder="Поиск по сайту">
             </form>
           </div>
         </div>
@@ -110,10 +114,18 @@
             <form class="searching_form" action="https://echo.htmlacademy.ru/" method="post">
               <ul class="inputs_list">
                 <li>
-                  <input class="input email" type="email" name="email" placeholder="email@example.com" required>
+                  <label class="visually-hidden" for="email_login">
+                    Введите ваш электронный адрес.
+                  </label>
+                  <input class="input email" type="email" name="email" id="email_login" value="email@example.com"
+                    placeholder="email@example.com" required>
                 </li>
                 <li>
-                  <input class="input password" name="password" type="password" required>
+                  <label class="visually_hidden" for="password_login">
+                    Введите пароль учетной записи.
+                  </label>
+                  <input class="input password" type="password" name="password" id="password_login" value="пароль"
+                    placeholder="пароль" required>
                 </li>
               </ul>
               <button class="additional_button sign_in_button" type="submit">Войти</button>
@@ -232,164 +244,172 @@
           Сливочное мороженое
         </h2>
         <form class="catalog_form" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset class="filter filter_sorting">
-            <legend class="filter_title">
-              Сортировка:
-            </legend>
+          <div class="filter_container first_row">
+            <fieldset class="filter filter_sorting">
+              <legend class="filter_title">
+                Сортировка:
+              </legend>
 
-            <select class="filter_input_wrapper select_sorting" aria-label="Сортировка">
-              <option value="popular">
-                по популярности
-              </option>
-              <option value="cheap">
-                сначала дешёвые
-              </option>
-              <option value="expensive">
-                сначала дорогие
-              </option>
+              <select class="select_control filter_inner" aria-label="Сортировка">
+                <option value="popular">
+                  по популярности
+                </option>
+                <option value="cheap">
+                  сначала дешёвые
+                </option>
+                <option value="expensive">
+                  сначала дорогие
+                </option>
+              </select>
+            </fieldset>
 
-            </select>
-          </fieldset>
-
-
-          <fieldset class="filter">
-            <legend class="filter_title">
-              Цена:
-              <span class="price_input price_input_from">
-                100
-              </span>
-              &#8381;
-              -
-              <span class="price_input price_input_to">500
-              </span>
-              &#8381;
-            </legend>
-            <div class="filter_input_wrapper filter_price">
-              <div class="range_scale">
-                <div class="range_bar">
-                  <button class="range_button range_button_min" type="button">
-                    <span class="visually_hidden">
-                      Изменить минимальную цену.
-                    </span>
-                  </button>
-                  <button class="range_button range_button_max" type="button">
-                    <span class="visually_hidden">
-                      Изменить максимальную цену.
-                    </span>
-                  </button>
+            <fieldset class="filter price_group">
+              <legend class="filter_title">
+                Цена: 100 ₽ – 500 ₽
+              </legend>
+              <div class="range filter_inner">
+                <div class="range_scale">
+                  <div class="range_bar" style="left: 32px; width: 72px">
+                    <button class="range_button range_button_min" type="button">
+                      <span class="visually_hidden">
+                        Изменить минимальную цену.
+                      </span>
+                    </button>
+                    <button class="range_button range_button_max" type="button">
+                      <span class="visually_hidden">
+                        Изменить максимальную цену.
+                      </span>
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          </fieldset>
+            </fieldset>
 
-          <fieldset class="filter">
-            <legend class="filter_title">
-              Жирность:
-            </legend>
+            <fieldset class="filter fatness_group">
+              <legend class="filter_title">
+                Жирность:
+              </legend>
 
-            <div class="filter_input_wrapper filter_input_wrapper_fat">
-              <ul class="controls controls_fat_percentage">
+              <ul class="control_list filter_inner">
                 <li class="control_item">
-                  <label class="control_label">
-                    <input class="visually_hidden control_input" type="radio" name="procent" value="0%">
-                    <span class="control_mark mark_radio">
+                  <label class="control">
+                    <input class="visually_hidden control_input_radio" type="radio" name="procent" value="0%">
+                    <span class="control_radio">
                     </span>
-                    0%
+                    <span class="control_label">
+                      0%
+                    </span>
                   </label>
                 </li>
 
                 <li class="control_item">
-                  <label class="control_label">
-                    <input class="visually_hidden control_input" type="radio" name="procent" value="up_to_10%" checked>
-                    <span class="control_mark mark_radio">
+                  <label class="control">
+                    <input class="visually_hidden control_input_radio" type="radio" name="procent" value="up_to_10%"
+                      checked>
+                    <span class="control_radio">
                     </span>
-                    до 10%
+                    <span class="control_label">
+                      до 10%
+                    </span>
                   </label>
                 </li>
 
                 <li class="control_item">
-                  <label class="control_label">
-                    <input class="visually_hidden control_input" type="radio" name="procent" value="up_to_30%">
-                    <span class="control_mark mark_radio">
+                  <label class="control">
+                    <input class="visually_hidden control_input_radio" type="radio" name="procent" value="up_to_30%">
+                    <span class="control_radio">
                     </span>
-                    до 30%
+                    <span class="control_label">
+                      до 30%
+                    </span>
                   </label>
                 </li>
 
                 <li class="control_item">
-                  <label class="control_label">
-                    <input class="visually_hidden control_input" type="radio" name="procent" value="above_30%">
-                    <span class="control_mark mark_radio">
+                  <label class="control">
+                    <input class="visually_hidden control_input_radio" type="radio" name="procent" value="above_30%">
+                    <span class="control_radio">
                     </span>
-                    выше 30%
+                    <span class="control_label">
+                      выше 30%
+                    </span>
                   </label>
                 </li>
               </ul>
-            </div>
-          </fieldset>
+            </fieldset>
+          </div>
 
-          <fieldset class="filter filter_ingredients">
-            <legend class="filter_title">
-              Наполнители:
-            </legend>
+          <div class="filter_container second_row">
+            <fieldset class="filter filter_ingredients">
+              <legend class="filter_title">
+                Наполнители:
+              </legend>
 
-            <div class="filter_input_wrapper filter_input_wrapper_ingredients">
-              <ul class="controls controls_ingredients">
+              <ul class="control_list filter_inner">
                 <li class="control_item">
-                  <label class="control_label">
-                    <input class="visually_hidden control_input" type="checkbox" name="fillers" value="chocolate"
-                      checked>
-                    <span class="control_mark mark_checkbox">
+                  <label class="control">
+                    <input class="visually_hidden control_input_checkbox" type="checkbox" name="fillers"
+                      value="chocolate" checked>
+                    <span class="control_mark">
                     </span>
-                    шоколадные
+                    <span class="control_label">
+                      шоколадные
+                    </span>
                   </label>
                 </li>
 
                 <li class="control_item">
-                  <label class="control_label">
-                    <input class="visually_hidden control_input" type="checkbox" name="fillers" value="sugar_sprinkles"
-                      checked>
-                    <span class="control_mark mark_checkbox">
+                  <label class="control">
+                    <input class="visually_hidden control_input_checkbox" type="checkbox" name="fillers"
+                      value="sugar_sprinkles" checked>
+                    <span class="control_mark">
                     </span>
-                    сахарные посыпки
+                    <span class="control_label">
+                      сахарные посыпки
+                    </span>
                   </label>
                 </li>
 
                 <li class="control_item">
-                  <label class="control_label">
-                    <input class="visually_hidden control_input" type="checkbox" name="fillers" value="fruits">
-                    <span class="control_mark mark_checkbox">
+                  <label class="control">
+                    <input class="visually_hidden control_input_checkbox" type="checkbox" name="fillers" value="fruits">
+                    <span class="control_mark">
                     </span>
-                    фрукты
+                    <span class="control_label">
+                      фрукты
+                    </span>
                   </label>
                 </li>
 
                 <li class="control_item">
-                  <label class="control_label">
-                    <input class="visually_hidden control_input" type="checkbox" name="fillers" value="syrup">
-                    <span class="control_mark mark_checkbox">
+                  <label class="control">
+                    <input class="visually_hidden control_input_checkbox" type="checkbox" name="fillers" value="syrup">
+                    <span class="control_mark">
                     </span>
-                    сиропы
+                    <span class="control_label">
+                      сиропы
+                    </span>
                   </label>
                 </li>
 
                 <li class="control_item">
-                  <label class="control_label">
-                    <input class="visually_hidden control_input" type="checkbox" name="fillers" value="jam">
-                    <span class="control_mark mark_checkbox">
+                  <label class="control">
+                    <input class="visually_hidden control_input_checkbox" type="checkbox" name="fillers" value="jam">
+                    <span class="control_mark">
                     </span>
-                    джемы
+                    <span class="control_label">
+                      джемы
+                    </span>
                   </label>
                 </li>
               </ul>
-            </div>
-          </fieldset>
+            </fieldset>
 
-          <button class="button catalog_filter_button" type="submit">
-            Применить
-          </button>
+            <button class="button catalog_filter_button" type="submit">
+              Применить
+            </button>
+          </div>
         </form>
-
 
         <ul class="product_list products_list_catalog">
           <li class="product_card">
@@ -756,7 +776,7 @@
 
 
           <div class="pagination_container">
-            <button class="pagination_button backward_button" type="button">
+            <button class="pagination_button backward_button is_active" type="button">
               <span class="visually_hidden">
                 Назад
               </span>

@@ -88,7 +88,11 @@
           </button>
           <div class="searching_popup">
             <form class="searching_form" action="https://echo.htmlacademy.ru/" method="post">
-              <input class="input searching_input" type="search" placeholder="Поиск по сайту">
+              <label class="visually_hidden" for="header_search">
+                Поиск по сайту.
+              </label>
+              <input class="input searching_input" type="search" name="header_search" id="header_search"
+                placeholder="Поиск по сайту">
             </form>
           </div>
         </div>
@@ -110,10 +114,18 @@
             <form class="searching_form" action="https://echo.htmlacademy.ru/" method="post">
               <ul class="inputs_list">
                 <li>
-                  <input class="input email" type="email" name="email" placeholder="email@example.com" required>
+                  <label class="visually-hidden" for="email_login">
+                    Введите ваш электронный адрес.
+                  </label>
+                  <input class="input email" type="email" name="email" id="email_login" value="email@example.com"
+                    placeholder="email@example.com" required>
                 </li>
                 <li>
-                  <input class="input password" name="password" type="password" required>
+                  <label class="visually_hidden" for="password_login">
+                    Введите пароль учетной записи.
+                  </label>
+                  <input class="input password" type="password" name="password" id="password_login" value="пароль"
+                    placeholder="пароль" required>
                 </li>
               </ul>
               <button class="additional_button sign_in_button" type="submit">Войти</button>
@@ -370,45 +382,50 @@
 
       <section class="present">
         <h2 class="present_title">
-          Заказывайте мороженое и получайте подарки!
+          Заказывайте мороженое
+          <br>
+          и получайте подарки!
         </h2>
-        <article class="present_article">
-          <div class="article_content">
-            <h3 class="article_title">
-              Малинка даром!
-            </h3>
-            <p class="article_description">
-              При покупке 2 кг любого фруктового
-              <br>
-              мороженого добавим в ваш заказ банку
-              <br>
-              малинового варенья бесплатно.
-            </p>
-            <a class="button article_link" href="">
-              Хочу подарок
-            </a>
-          </div>
-          <img class="article_image" src="image/photo_raspberries.png" alt="Фото малины." width="219" height="268">
-        </article>
+        <div class="present_container">
+          <article class="present_article">
+            <div class="article_content">
+              <h3 class="article_title">
+                Малинка даром!
+              </h3>
+              <p class="article_description">
+                При покупке 2 кг любого фруктового
+                <br>
+                мороженого добавим в ваш заказ банку
+                <br>
+                малинового варенья бесплатно.
+              </p>
+              <a class="button article_link" href="">
+                Хочу подарок
+              </a>
+            </div>
+            <img class="article_image" src="image/photo_raspberries.png" alt="Фото малины." width="219" height="268">
+          </article>
 
-        <article class="present_article">
-          <div class="article_content">
-            <h3 class="article_title">
-              Маршмеллоу даром!
-            </h3>
-            <p class="article_description">
-              При покупке 2 кг пломбира добавим
-              <br>
-              в ваш заказ упаковку нежных
-              <br>
-              зефирок совершенно бесплатно.
-            </p>
-            <a class="button article_link" href="">
-              Хочу подарок
-            </a>
-          </div>
-          <img class="article_image" src="image/photo_marshmallow.png" alt="Фото маршмеллоу." width="219" height="268">
-        </article>
+          <article class="present_article">
+            <div class="article_content">
+              <h3 class="article_title">
+                Маршмеллоу даром!
+              </h3>
+              <p class="article_description">
+                При покупке 2 кг пломбира добавим
+                <br>
+                в ваш заказ упаковку нежных
+                <br>
+                зефирок совершенно бесплатно.
+              </p>
+              <a class="button article_link" href="">
+                Хочу подарок
+              </a>
+            </div>
+            <img class="article_image" src="image/photo_marshmallow.png" alt="Фото маршмеллоу." width="219"
+              height="268">
+          </article>
+        </div>
       </section>
 
       <section class="popular_products">
@@ -446,7 +463,7 @@
           </li>
 
           <li class="product_card">
-            <a href="#" class="product_link">
+            <a class="product_link" href="#">
               <img class="product_image" src="image/pistachio_ice_cream.jpg" alt="Мороженное фисташка." width="168"
                 height="168">
               <h3 class="product_title">
@@ -476,7 +493,7 @@
           </li>
 
           <li class="product_card">
-            <a href="#" class="product_link">
+            <a class="product_link" href="#">
               <img class="product_image" src="image/blueberry_ice_cream.jpg" alt="Мороженное черника." width="168"
                 height="168">
               <h3 class="product_title">
@@ -506,7 +523,7 @@
           </li>
 
           <li class="product_card">
-            <a href="#" class="product_link">
+            <a class="product_link" href="#">
               <img class="product_image" src="image/bubble_gum.jpg" alt="Мороженное бабл-гам." width="168" height="168">
               <h3 class="product_title">
                 Бабл-гам
@@ -610,8 +627,8 @@
               <label class="visually_hidden" for="subscription_letter">
                 Форма подписки.
               </label>
-              <input class="input newsletter_input" placeholder="email@example.com" type="email"
-                name="subscription_letter" id="subscription_letter">
+              <input class="input newsletter_input" type="email" name="subscription_letter" id="subscription_letter"
+                placeholder="email@example.com">
               <button class="additional_button newsletter_button" type="submit">
                 Отправить
               </button>
@@ -688,7 +705,6 @@
               <input class="input delivery_address_input" type="text" placeholder="ул. Большая Конюшенная, 19/8"
                 id="address">
             </div>
-
 
             <button class="additional_button  delivery_submit" type="submit">Отправить</button>
           </form>
@@ -831,13 +847,23 @@
           Мы обязательно ответим вам!
         </h2>
         <form class="modal_form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="input modal_input user_name_input" type="text" name="user-name" required="" value=""
-            placeholder="Имя и фамилия" aria-label="Введите ваши Имя и Фамилию.">
+          <label class="visually_hidden" for="user_name">
+            Укажите имя и фамилию.
+          </label>
+          <input class="input modal_input user_name_input" type="text" name="user_name" id="user_name"
+            placeholder="Имя и фамилия">
           <!-- При неправильном заполнении поля ввода e-mail к <input> c классом email_input добавить класс is-invalid для показа сообщения -->
-          <input class="input modal_input email_input" type="email" name="user-email" required="" value=""
-            placeholder="email@example.com" id="user-email" aria-label="Введите адрес электронной почты.">
-          <textarea class="input modal_input comment_input" name="comment" aria-label="Напишите комментарий." rows="6">
-            В свободной форме
+          <label class="visually_hidden" for="user_email">
+            Укажите электронный адрес.
+          </label>
+          <input class="input modal_input email_input" type="email" name="user_email" id="user_email"
+            placeholder="email@example.com">
+          <label class="visually_hidden" for="comment">
+            Напишите ваш комментарий.
+          </label>
+          <textarea class="input modal_input comment_input" rows="6" name="comment" id="comment"
+            placeholder="в свободной форме.">
+          В свободной форме
           </textarea>
           <button class="modal_button additional_button" type="submit">
             Отправить
